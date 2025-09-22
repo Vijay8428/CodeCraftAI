@@ -10,7 +10,7 @@ Here’s a sample of a generated project output:
 
 ![Generated Project Output](<img width="1911" height="969" alt="image" src="https://github.com/user-attachments/assets/35b4e9f8-7743-4058-9b3e-47167348ec05" />
 .png)  
-> *Replace the above path with your actual screenshot file in the repo.*
+
 
 ---
 
