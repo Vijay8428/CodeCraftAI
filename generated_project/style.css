@@ -1,0 +1,121 @@
+/*
+  style.css
+  Responsive and modern styling for the Tic Tac Toe UI.
+*/
+
+:root {
+  --bg-color: #f0f0f0;
+  --primary-color: #333333;
+  --x-color: #e74c3c;   /* Red for X */
+  --o-color: #3498db;   /* Blue for O */
+  --win-color: #27ae60; /* Green for win highlight */
+}
+
+/* Global body styling */
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background: var(--bg-color);
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--primary-color);
+}
+
+/* Game container – card‑like appearance */
+#game-container {
+  max-width: 600px;
+  width: 90%;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Status message */
+#status {
+  margin: 10px 0;
+  font-size: 1.2rem;
+  color: var(--primary-color);
+}
+#status.win {
+  color: var(--win-color);
+}
+#status.draw {
+  color: #555555;
+}
+
+/* Board grid */
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+  width: 90vmin;
+  height: 90vmin;
+  max-width: 400px;
+  max-height: 400px;
+  margin: 0 auto;
+}
+
+/* Individual cell */
+.cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #cccccc;
+  background: #fafafa;
+  font-size: calc(5vmin);
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.2s, transform 0.1s;
+}
+
+/* Hover effect for empty cells */
+.cell:hover:not(.x):not(.o) {
+  background: #e0e0e0;
+}
+
+/* Marks */
+.cell.x {
+  color: var(--x-color);
+}
+.cell.o {
+  color: var(--o-color);
+}
+
+/* Highlight winning line */
+.cell.highlight {
+  background: var(--win-color);
+  color: #ffffff;
+}
+
+/* Restart button */
+#restartBtn {
+  margin-top: 15px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  background: var(--primary-color);
+  color: #ffffff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+#restartBtn:hover:not(:disabled) {
+  background: #555555;
+}
+#restartBtn:disabled {
+  background: #aaaaaa;
+  cursor: not-allowed;
+}
+
+/* Media query for very small screens */
+@media (max-width: 400px) {
+  .cell {
+    font-size: calc(8vmin);
+  }
+}

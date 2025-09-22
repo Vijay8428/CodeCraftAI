@@ -103,7 +103,7 @@ def build_graph():
     
     
     
-user_prompt = "create a simple to-do list using html,css,js"
+user_prompt = "create a tic tac toe"
 
 if __name__ == "__main__":
     agent = build_graph()
